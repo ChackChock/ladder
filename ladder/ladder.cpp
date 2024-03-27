@@ -68,3 +68,18 @@ int readNumberFromFile(char* path) {
 
 	return charToInt(temp);
 }
+
+
+ErrorCode writeResultToFile(int result, char* path) {
+	ofstream file(path);
+
+	if (file.is_open())
+	{
+		file << result;
+		file.close();
+	}
+	else {
+		return ErrorCode::IncorrectOutputFile;
+	}
+	return ErrorCode::NoError;
+}
