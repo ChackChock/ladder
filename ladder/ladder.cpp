@@ -37,3 +37,17 @@ int charToInt(char* string)
 	}
 	return n;
 }
+
+
+ErrorCode isNumberCorrect(int number) {
+	if (number == -1) {
+		return ErrorCode::IncorrectInputData;
+	}
+	if (number == -2) {
+		return ErrorCode::IncorrectInputFile;
+	}
+	if (number < 1 || number > 100) {
+		return ErrorCode::IncorrectNumber;
+	}
+	return ErrorCode::NoError;
+}
