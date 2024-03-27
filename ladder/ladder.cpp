@@ -22,3 +22,18 @@ int calculateLaddersNumber(int prev_level, int number) {
 
 	return count;
 }
+
+
+int charToInt(char* string)
+{
+	int i, n = 0;
+	for (i = 0; i < strlen(string); ++i) {
+		if (isdigit(string[i])) {
+			n = 10 * n + (string[i] - '0');
+		}
+		else {
+			return -1;
+		}
+	}
+	return n;
+}
