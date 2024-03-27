@@ -51,3 +51,20 @@ ErrorCode isNumberCorrect(int number) {
 	}
 	return ErrorCode::NoError;
 }
+
+
+int readNumberFromFile(char* path) {
+	char temp[5];
+	ifstream file(path);
+
+	if (file.is_open())
+	{
+		file.getline(temp, 5);
+		file.close();
+	}
+	else {
+		return -2;
+	}
+
+	return charToInt(temp);
+}
