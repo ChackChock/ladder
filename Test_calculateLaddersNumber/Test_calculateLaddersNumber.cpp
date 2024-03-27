@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "CppUnitTest.h"
+#include "../ladder/Header.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
